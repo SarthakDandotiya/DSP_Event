@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <title>| CyberSurf</title>
 </head>
 <body>
@@ -54,8 +55,6 @@
                             <label for="">Registration No.</label>
                             <input type="text">
                         </li>
-                    </ul>
-                    <ul>
                         <li>
                             <label for="">Mobile No.</label>
                             <input type="text">
@@ -64,10 +63,11 @@
                             <label for="">Email Id</label>
                             <input type="text">
                         </li>
+                        <li id="errorMsg">*errors to be desplayed here</li>
                     </ul>
                 </div>
                 <button class="submitButton" type="submit">
-                    SUBMIT
+                    SUBMIT &#10095;
                 </button>
             </form>
         </div>
@@ -95,7 +95,7 @@
 
     <!-- Footer -->
     <footer>
-        <a href="http://www.acmvit.in">CONTACT THE ORGANISERS</a>
+        <!-- <a href="http://www.acmvit.in">CONTACT THE ORGANISERS</a> -->
         <div class="footerLogo">
             <a href="http://www.vit.ac.in"><img class="vitLogo" src="images/vitwhite.png" alt="vit logo"></a>
         </div>
