@@ -19,6 +19,7 @@ html{
 body{
     width: 100%;
     background-color: white;
+    overflow-x: hidden;
 }
 h1{
     font-size: 60px;
@@ -90,6 +91,7 @@ header ul li a img{
 }
 header ul li:nth-child(2){
     padding-top: 5px;
+    margin-right: 1%;
 }
 .landingSection{
     background-image: url("images/Mask\ Group\ 1.png");
