@@ -76,5 +76,9 @@
     }
     .profImage{
         margin-bottom: 2rem;
+        width: 100%;
+    }
+    .landingSection{
+        background-image: url("images/PhoneBackground.png");
     }
 }
