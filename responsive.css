@@ -12,6 +12,9 @@
         width: 90%;
         margin: 0 5%;
     }
+    .submitButton{
+        margin-top: 0;
+    }
 
 
     .pkFix{
@@ -49,6 +52,15 @@
     h3{
         font-size: 36px;
     }
+    .addnlInfo{
+        display: none;
+    }
+    .addnlInfo2{
+        margin-top: 1rem;
+    }
+    .eventDate2{
+        display: block;
+    }
     .registerButton{
         display: inline-block;
     }
@@ -69,7 +81,7 @@
         margin-top: 2rem;
     }
     h3{
-        margin-top: 4rem;
+        margin-top: 3rem;
         font-size: 30px;
     }
     .pkFix{
