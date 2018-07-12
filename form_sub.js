@@ -5,9 +5,14 @@ $(window).ready(function(){
         $('.submitButton').html('SUBMIT &#10095;');
         $("#form")[0].reset();
     });
-          $('.submitButton').click(function(e){
-            e.preventDefault();
-            $('.errorMsg').css('display','none');
+    $('.submitButton').click(function(e){
+        e.preventDefault();
+        $('.errorMsg').css('display','none');
+        if($('#email').val()=="" || $('#name').val()=="" || $('#mobile').val()=="" || $('#regno').val()==""){
+            $('.errorMsg').text('Please fill all the details.');
+            $('.errorMsg').css('display','block');
+        }
+        else{
             var xhttp=new XMLHttpRequest();
             xhttp.onreadystatechange=function(){
                 console.log(this.responseText)
@@ -49,5 +54,7 @@ $(window).ready(function(){
                 regno:$('#regno').val().toUpperCase(),
                 mobile:$('#mobile').val()
             }));
-        })
+        }
+        
+    })
 });
