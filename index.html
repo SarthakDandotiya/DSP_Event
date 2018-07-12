@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="responsive.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
     </script>
+    <script src="form_sub.js">
+    </script>
     <title>| CyberSurf</title>
 </head>
 <body>
@@ -65,28 +67,29 @@
         </div>
         <div id="rsvp" class="formSection">
             <h3>REGISTER</h3>
-            <form action="">
-                <div>
+            <form id="form">
+                <div class="h">
                     <ul>
                         <li>
                             <label for="">Name</label>
-                            <input type="text">
+                            <input id="name" type="text">
                         </li>
                         <li>
                             <label for="">Registration No.</label>
-                            <input type="text">
+                            <input id="regno" type="text">
                         </li>
                         <li>
                             <label for="">Mobile No.</label>
-                            <input type="text">
+                            <input id="mobile" type="text">
                         </li>
                         <li>
                             <label for="">Email ID</label>
-                            <input type="text">
+                            <input id="email" type="text">
                         </li>
-                        <li id="errorMsg">*errors to be desplayed here</li>
+                        <li class="errorMsg">*errors to be desplayed here</li>
                     </ul>
                 </div>
+                <div class="g">THANK YOU!<span class="x">X</span></div>
                 <button class="submitButton" type="submit">
                     SUBMIT &#10095;
                 </button>
