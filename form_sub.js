@@ -24,8 +24,8 @@ $(window).ready(function(){
                     $('.errorMsg').css('display','block');
                 }
                 else if(this.responseText=='ENTER_NAME'){
-                    $('.errormsg').text('Please enter your name');
-                    $('.errormsg').css('display','block');
+                    $('.errorMsg').text('Please enter your name');
+                    $('.errorMsg').css('display','block');
                 }
                 else if(this.responseText=='ALREADY_REGISTERED'){
                     $('.errorMsg').text('You have previously filled up this form.');
