@@ -21,7 +21,7 @@ body{
     background-color: white;
 }
 h1{
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 900;
     color: white;
     border-left: 5px solid var(--primary-teal);
@@ -102,7 +102,7 @@ header ul li:nth-child(2){
     background-repeat: no-repeat;
 }
 .eventName{
-    margin-left: 5%;
+    margin:0 5%;
     min-height: 60%;
     display: flex;
     flex-direction: column;
