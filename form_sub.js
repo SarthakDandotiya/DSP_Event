@@ -7,16 +7,15 @@ $(window).ready(function(){
     });
     $('.submitButton').click(function(e){
         e.preventDefault();
-        $('.errorMsg').css('display','none');
+        $(".errorMsg").css("display","none");
         if($('#email').val()=="" || $('#name').val()=="" || $('#mobile').val()=="" || $('#regno').val()==""){
             $('.errorMsg').text('Please fill all the details.');
             $('.errorMsg').css('display','block');
         }
         else{
-            $('.spinner').css('display','block');
+            $('.spinner').show();
             var xhttp=new XMLHttpRequest();
             xhttp.onreadystatechange=function(){
-                console.log(this.responseText)
                 if(this.responseText=='BAD_EMAIL'){
                     $('.spinner').css('display','none');
                     $('.errorMsg').text('Check your email');
