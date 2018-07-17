@@ -13,34 +13,42 @@ $(window).ready(function(){
             $('.errorMsg').css('display','block');
         }
         else{
+            $('.spinner').css('display','block');
             var xhttp=new XMLHttpRequest();
             xhttp.onreadystatechange=function(){
                 console.log(this.responseText)
                 if(this.responseText=='BAD_EMAIL'){
+                    $('.spinner').css('display','none');
                     $('.errorMsg').text('Check your email');
                     $('.errorMsg').css('display','block');
                 }
                 else if(this.responseText=='BAD_NUMBER'){
+                    $('.spinner').css('display','none');
                     $('.errorMsg').text('Incorrect mobile number');
                     $('.errorMsg').css('display','block');
                 }
                 else if(this.responseText=='BAD_REG_NO'){
+                    $('.spinner').css('display','none');
                     $('.errorMsg').text('Incorrect registration number');
                     $('.errorMsg').css('display','block');
                 }
                 else if(this.responseText=='ENTER_NAME'){
+                    $('.spinner').css('display','none');
                     $('.errorMsg').text('Please enter your name');
                     $('.errorMsg').css('display','block');
                 }
                 else if(this.responseText=='ALREADY_REGISTERED'){
+                    $('.spinner').css('display','none');
                     $('.errorMsg').text('You have previously filled up this form.');
                     $('.errorMsg').css('display','block');
                 }
                 else if(this.responseText=='TRY_AGAIN'){
+                    $('.spinner').css('display','none');
                     $('.errorMsg').text('Please try again');
                     $('.errorMsg').css('display','block');
                 }
                 else if(this.responseText=='OK'){
+                    $('.spinner').css('display','none');
                     $('.h').css('display','none');
                     $('.g').css('display','block');
                     $('.submitButton').html('SUBMITTED 	&#10003;')
