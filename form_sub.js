@@ -7,53 +7,54 @@ $(window).ready(function(){
     });
     $('.submitButton').click(function(e){
         e.preventDefault();
-        $(".errorMsg").css("display","none");
+        $("#errorMsg").removeClass("show");
+        $('#spinner').addClass('show');
         if($('#email').val()=="" || $('#name').val()=="" || $('#mobile').val()=="" || $('#regno').val()==""){
+            $('#spinner').removeClass('show');
             $('.errorMsg').text('Please fill all the details.');
-            $('.errorMsg').css('display','block');
+            $("#errorMsg").addClass("show");
         }
         else{
-            $('.spinner').show();
             var xhttp=new XMLHttpRequest();
             xhttp.onreadystatechange=function(){
                 if(this.responseText=='BAD_EMAIL'){
-                    $('.spinner').css('display','none');
+                    $('#spinner').removeClass('show');
                     $('.errorMsg').text('Check your email');
-                    $('.errorMsg').css('display','block');
+                    $("#errorMsg").addClass("show");
                 }
                 else if(this.responseText=='BAD_NUMBER'){
-                    $('.spinner').css('display','none');
+                    $('#spinner').removeClass('show');
                     $('.errorMsg').text('Incorrect mobile number');
-                    $('.errorMsg').css('display','block');
+                    $("#errorMsg").addClass("show");
                 }
                 else if(this.responseText=='BAD_REG_NO'){
-                    $('.spinner').css('display','none');
+                    $('#spinner').removeClass('show');
                     $('.errorMsg').text('Incorrect registration number');
-                    $('.errorMsg').css('display','block');
+                    $("#errorMsg").addClass("show");
                 }
                 else if(this.responseText=='ENTER_NAME'){
-                    $('.spinner').css('display','none');
+                    $('#spinner').removeClass('show');
                     $('.errorMsg').text('Please enter your name');
-                    $('.errorMsg').css('display','block');
+                    $("#errorMsg").addClass("show");
                 }
                 else if(this.responseText=='ALREADY_REGISTERED'){
-                    $('.spinner').css('display','none');
+                    $('#spinner').removeClass('show');
                     $('.errorMsg').text('You have previously filled up this form.');
-                    $('.errorMsg').css('display','block');
+                    $("#errorMsg").addClass("show");
                 }
                 else if(this.responseText=='TRY_AGAIN'){
-                    $('.spinner').css('display','none');
+                    $('#spinner').removeClass('show');
                     $('.errorMsg').text('Please try again');
-                    $('.errorMsg').css('display','block');
+                    $("#errorMsg").addClass("show");
                 }
                 else if(this.responseText=='OK'){
-                    $('.spinner').css('display','none');
+                    $('#spinner').removeClass('show');
                     $('.h').css('display','none');
                     $('.g').css('display','block');
                     $('.submitButton').html('SUBMITTED 	&#10003;')
                 }
             }
-            xhttp.open("POST", "https://secure-sea-96204.herokuapp.com/add", false);
+            xhttp.open("POST", "https://secure-sea-96204.herokuapp.com/add", true);
             xhttp.setRequestHeader("Content-type", "application/json");
             xhttp.send(JSON.stringify({
                 email: $('#email').val(),

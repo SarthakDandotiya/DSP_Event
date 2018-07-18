@@ -335,3 +335,6 @@ footer a{
         -o-transform:rotate(360deg);
         -ms-transform:rotate(360deg); }
 }
+.show{
+    display: block !important;
+}
