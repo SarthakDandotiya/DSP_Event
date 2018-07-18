@@ -5,6 +5,7 @@ $(window).ready(function(){
         $('.submitButton').html('SUBMIT &#10095;');
         $("#form")[0].reset();
     });
+    
     $('.submitButton').click(function(e){
         e.preventDefault();
         $("#errorMsg").removeClass("show");
